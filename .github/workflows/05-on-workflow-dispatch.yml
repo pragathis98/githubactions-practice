@@ -1,4 +1,4 @@
-name: 0 - Manunal Run with Inputs
+name: 05 - Manunal Run with Inputs
 
 on:
   workflow_dispatch:
