@@ -1,0 +1,17 @@
+name : 04 - On Push (filtered)
+
+on:
+  push:
+    branches:
+      - machine
+      - 'release/**'
+    paths:
+      - 'src/**'
+      - '**.js'
+
+jobs:
+  filered-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This only runs for the branches/paths above
+        run: echo "relevent change detected on brach ${{ github.ref_name}}"
