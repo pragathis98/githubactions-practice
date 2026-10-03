@@ -1,0 +1,16 @@
+name: 01 - Hello world
+
+on: workflow_dispatch # Run workflow button in the action tab (mannual trigger)
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      -name: print a greeting
+      run: echo "hello, Github Actions!"
+
+      -name: print multiple lines
+      run: |
+        echo "This steps runs serveral shell commands"
+        echo "Today's runner is: $RUNNER_OS"
+        echo "The Repository is $GITHUB_REPOSITORY"
