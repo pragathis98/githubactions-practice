@@ -11,6 +11,6 @@ jobs:
 
       - name: print multiple lines
         run: |
-        echo "This steps runs serveral shell commands"
-        echo "Today's runner is: $RUNNER_OS"
-        echo "The Repository is $GITHUB_REPOSITORY"
+          echo "This steps runs serveral shell commands"
+          echo "Today's runner is: $RUNNER_OS"
+          echo "The Repository is $GITHUB_REPOSITORY"
