@@ -3,7 +3,7 @@ name: 05 - Manunal Run with Inputs
 on:
   workflow_dispatch:
     inputs:
-      evironments:
+      evironment:
         description: 'Target evironments'
         required: true
         default: 'staging'
