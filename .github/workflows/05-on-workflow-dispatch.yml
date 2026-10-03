@@ -2,7 +2,7 @@ name: 05 - Manunal Run with Inputs
 
 on:
   workflow_dispatch:
-    input:
+    inputs:
       evironments:
         description: 'Target evironments'
         required: true
