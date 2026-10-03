@@ -29,8 +29,8 @@ export function cleanReports() {
 // controls it. `node src/greet.js "x; whoami"` runs BOTH commands, because the
 // shell splits on the `;` — Node never sees two commands.
 export function greet() {
-  const name = process.argv[2] || 'world';
-  execSync(`echo Hello, ${name}`, { stdio: 'inherit' });
+  const name1 = process.argv[2] || 'world';
+  execSync(`echo Hello, ${name1}`, { stdio: 'inherit' });
 }
 
 // The fix for both is identical, and it is NOT escaping the input: stop
