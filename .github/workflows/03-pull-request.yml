@@ -13,4 +13,4 @@ jobs:
           echo "Event     : $GITHUB_EVENT_NAME"
           echo "PR base   : ${{ github.base_ref }}"
           echo "PR head   : ${{ github.head_ref }}"
-          echo "PR number : ${{ guthub.event.pull_request.number }}"
+          echo "PR number : ${{ github.event.pull_request.number }}"
