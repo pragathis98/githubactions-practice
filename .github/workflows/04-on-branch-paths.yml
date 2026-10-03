@@ -3,7 +3,7 @@ name : 04 - On Push (filtered)
 on:
   push:
     branches:
-      - machine
+      - main
       - 'release/**'
     paths:
       - 'src/**'
