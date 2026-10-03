@@ -1,0 +1,35 @@
+name: 0 - Manunal Run with Inputs
+
+on:
+  workflow_dispatch:
+    input:
+      evironments:
+        description: 'Target evironments'
+        required: true
+        default: 'staging'
+        type: choise
+        options:
+          - staging
+          - dev
+          - production
+          - uat
+          - DR
+          - SIT
+      version:
+        description: 'version to deploy (e.g., 1.4.9)'
+        required: false
+        default: latest
+        type: string
+      dry_run:
+        description: 'Only simulate, do not actually depoly'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  manual-job:
+    - name: Show the inputs the user selected
+      run: |
+        echo "Environment : ${{ inputs.environment }}"
+        echo "Version : ${{ inputs.version }}"
+        echo "Dry run? : ${{ inputs.dry_run }}"
